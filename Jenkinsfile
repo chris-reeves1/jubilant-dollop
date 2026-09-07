@@ -9,7 +9,7 @@ pipeline{
                 retry(2)
             }
             steps{
-                sh "mkdir jenkins-test1"           
+                sh "mkdir jenkins-test1 || true"           
             }
         }
         stage("add a file"){
