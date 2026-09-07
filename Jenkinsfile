@@ -9,16 +9,16 @@ pipeline{
                 retry(2)
             }
             steps{
-                sh "mkdir /var/lib/jenkins-test1"           
+                sh "mkdir jenkins-test1"           
             }
         }
         stage("add a file"){
             steps{
-                sh "touch /var/lib/jenkins-test1/file1.txt"
+                sh "touch jenkins-test1/file1.txt"
             }
             post{
                 always{
-                    archiveArtifacts artifacts: '/var/lib/jenkins-test1/file1.txt'
+                    archiveArtifacts artifacts: 'jenkins-test1/file1.txt'
                 }
             }
         }
