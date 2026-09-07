@@ -18,7 +18,7 @@ pipeline{
             }
             post{
                 always{
-                    archiveArtifacts artifacts: '~/jenkins-test/file1.txt'
+                    archiveArtifacts artifacts: 'file1.txt'
                 }
             }
         }
